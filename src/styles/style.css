@@ -1,0 +1,227 @@
+/* Dark color: */
+
+
+/* Gray background: rgb(87, 87, 87); */
+
+html{
+    font-size: 12px;
+    /* transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1); */
+    scroll-behavior: smooth;
+}
+body{
+    /* background-color: rgb(87, 87, 87); */
+    background-color: rgb(27, 27, 27);
+}
+
+h3{
+    font-size: 3rem;
+}
+.navbar{
+    font-size: 1.5rem;
+    /* background-color: rgb(60, 214, 219); */
+    background-color: rgb(0, 105, 14);
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: end;
+    align-items: baseline;
+    position: fixed;
+    z-index: 50;
+}
+
+.nav-item{
+    list-style: none;
+    margin-right: 30px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: rgb(87, 87, 87);
+    transition: 500ms all cubic-bezier(0.075, 0.42, 0.165, 1);
+}
+
+.nav-link:active{
+    color: rgb(247, 247, 247);
+    border-bottom: solid 5px rgb(247, 247, 247);
+}
+
+
+.main{
+    max-width: 100%;
+    font-size: 4rem;
+    overflow-x:hidden;
+    position: relative;
+    height: 100vh;
+    margin:0 0 10px 0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../../public/images/cai-carney-deaqEVtdSgk-unsplash.jpg');
+    background-size: cover; */
+    color: aliceblue;
+}
+
+.my-pic{
+    position: absolute;
+    z-index: -1;
+    left:25%;
+    top:30%;
+    overflow-x:hidden;
+}
+
+.skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.box{
+    padding: 20px;
+    width: 80px;
+    margin: 10px;
+    background-color: rgb(248, 249, 250);
+    border-radius: 5px;
+}
+
+.box img{
+    width: 80px;
+}
+
+.express-center img{
+    transform: translateY(30px);
+}
+
+.contact-div{
+    font-size: 2rem;
+    padding-bottom: 50px;
+}
+
+.contact-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact{
+    width: fit-content;
+    transition: 500ms ease-in;
+    margin-bottom: 30px;
+}
+.contact a{
+    width: fit-content;
+    color:rgb(60, 214, 219);
+    text-decoration: none;
+}
+.contact:hover{
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+.arrow img{
+    width: 30px;
+    transform: rotate(180deg);
+}
+.carousel-whole-container{
+    margin: 100px auto;
+    width: 560px;
+    text-align: center;
+}
+
+.carousel-whole-container .button-group button{
+    margin:10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: rgb(0, 105, 14);
+    border: 1px solid rgb(0, 105, 14);
+    border-radius: 5px;
+    box-shadow: rgba(0, 73, 30, 0.568) 5px 5px;
+}
+
+.carousel-whole-container .button-group button:active{
+    background-color: rgb(3, 146, 22);
+}
+
+.carousel-whole-container .button-group a{
+    margin:10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: rgb(0, 105, 14);
+    border: 1px solid rgb(0, 105, 14);
+    border-radius: 5px;
+    box-shadow: rgba(0, 73, 30, 0.568) 5px 5px;
+    color:white;
+}
+
+.carousel-whole-container .button-group a:active{
+    background-color: rgb(3, 146, 22);
+}
+
+.carousel-container{
+    position: relative;
+    height: 360px;
+    width: 480px;
+    z-index:20;
+    /* background-color: aliceblue; */
+    margin-bottom: 50px;
+}
+.carousel-item{
+    position: absolute;
+    height: 360px;
+    width: 360px;
+    background-color: rgb(29, 247, 0);
+    transition: 500ms all;
+    /* transform: rotate(-45deg); */
+    margin:0 auto;
+    left: 100px;
+    transform: scale(0.2);
+}
+.carousel-back{
+    opacity: 0;
+}
+.carousel-active{
+    z-index: 10;
+    /* transform: rotate(0deg); */
+    background-color: azure;
+    transform: scale(1);
+    margin: 10px 0;
+}
+.carousel-active-left{
+    left: -150px;
+    top: 15px;
+    transform: scale(0.7);
+    /* rotate(-25deg); */
+}
+.carousel-active-right{
+    transform: scale(0.7);
+    /* rotate(25deg) */
+    left:350px;
+    top:15px;
+}
+
+@media (min-width:1024px) {
+    html{
+        font-size: 28px;
+    }
+    .navbar{
+        font-size: 2rem;
+    }
+    .mode{
+        width: 30px;
+    }
+    .my-pic{
+        z-index: -1;
+        left:65%;
+        top:30%;
+        overflow-x:hidden;
+    }
+    .nav-link:hover{
+        color: rgb(247, 247, 247);
+        border-bottom: solid 5px rgb(247, 247, 247);
+    }
+}
