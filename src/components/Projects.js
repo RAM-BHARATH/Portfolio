@@ -26,7 +26,7 @@ export default function Projects() {
         {
             name:'Genio 2k22',
             source:'https://github.com/RAM-BHARATH/genio2k22',
-            live:'www.genio2k22.com'
+            live:'https://www.genio2k22.com'
         },
         {
             name:'Markdown Previewer',
@@ -62,11 +62,11 @@ export default function Projects() {
         }
     }
     return(
-        <div className="carousel-whole-container">
+        <div className="carousel-whole-container" id="works">
             <div className="carousel-container">
                 {projects.map((project, index)=>{
                     return(
-                        <div className={`carousel-item ${active===index?'carousel-active':''} ${left===index?'carousel-active-left':''} ${right===index?'carousel-active-right':''} ${(active===index||left===index||right===index)?'':'carousel-back'}` } id="1">
+                        <div key={index} className={`carousel-item ${active===index?'carousel-active':''} ${left===index?'carousel-active-left':''} ${right===index?'carousel-active-right':''} ${(active===index||left===index||right===index)?'':'carousel-back'}` } id="1">
                             {project.name}
                         </div>
                     )

@@ -5,8 +5,10 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import './styles/style.css'
 function App() {
+  
   return (
     <>
+      {console.log(document.readyState)}
       <Navbar />
       <Main />
       <Projects />

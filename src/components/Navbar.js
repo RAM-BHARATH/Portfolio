@@ -8,13 +8,14 @@ export function Navbar() {
             
             <div id="hamitems" className='hamitems'>
                 <a href="#main">Home</a>
-                <a href="#about">About</a>
+                {/* <a href="#about">About</a> */}
+                <a href="#works">Works</a>
                 <a href="#skills">Skills</a>
                 <a href="#contacts">Contact</a>
                 {/* <a href="#contact">
                     <img src="../images/moon.svg" alt="Light mode" id="mode"/>
                 </a> */}
-                <a href="#mode" id="mode">Dark</a>
+                {/* <a href="#mode" id="mode">Dark</a> */}
             </div>
         </nav>
     );
