@@ -1,23 +1,47 @@
-import '../styles/navbar.css'
+// import '../styles/navbar.css'
 
 export function Navbar() {
     return(
-        <nav id="hamnav">
-            <label htmlFor="hamburger">&#9776;</label>
-            <input type="checkbox" id="hamburger"/>
+        // <nav id="hamnav">
+        //     <label htmlFor="hamburger">&#9776;</label>
+        //     <input type="checkbox" id="hamburger"/>
             
-            <div id="hamitems" className='hamitems'>
-                <a href="#main">Home</a>
-                {/* <a href="#about">About</a> */}
-                <a href="#works">Works</a>
-                <a href="#skills">Skills</a>
-                <a href="#contacts">Contact</a>
-                {/* <a href="#contact">
-                    <img src="../images/moon.svg" alt="Light mode" id="mode"/>
-                </a> */}
-                {/* <a href="#mode" id="mode">Dark</a> */}
-            </div>
-        </nav>
+        //     <div id="hamitems" className='hamitems'>
+        //         <a href="#main">Home</a>
+        //         {/* <a href="#about">About</a> */}
+        //         <a href="#works">Works</a>
+        //         <a href="#skills">Skills</a>
+        //         <a href="#contacts">Contact</a>
+        //         {/* <a href="#contact">
+        //             <img src="../images/moon.svg" alt="Light mode" id="mode"/>
+        //         </a> */}
+        //         {/* <a href="#mode" id="mode">Dark</a> */}
+        //     </div>
+        // </nav>
+        <div className="left-nav">
+            <ul>
+                <li className='nav-item'>
+                    <a href="#main">
+                        <img src={process.env.PUBLIC_URL + '/images/assets/home.svg'}/>
+                    </a>
+                </li>
+                <li className='nav-item'>
+                    <a href="#works">
+                        <img src={process.env.PUBLIC_URL + '/images/assets/work.svg'}/>
+                    </a>
+                </li>
+                <li className='nav-item'>
+                <a href="#skills">
+                    <img src={process.env.PUBLIC_URL + '/images/assets/skills.svg'}/>    
+                </a>
+                </li>
+                <li className='nav-item'>
+                <a href="#contacts">
+                    <img src={process.env.PUBLIC_URL + '/images/assets/contact.svg'}/>
+                </a>
+                </li>
+            </ul>
+        </div>
     );
 }
 

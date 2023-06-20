@@ -43,12 +43,13 @@ h3{
 }
 
 .name{
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding-left: 0;
 }
 
 .what-i-do{
     font-size: 0.7em;
+    font-weight: 200;
 }
 
 .about{
@@ -89,6 +90,23 @@ h3{
     margin: 10px;
     background-color: rgb(248, 249, 250);
     border-radius: 5px;
+}
+
+.left-nav{
+    position: fixed;
+
+
+}
+
+.nav-item{
+    list-style: none;
+    width: 80px;
+    margin: 35px 0;
+}
+
+.nav-item img{
+    width: 48px;
+    fill: aliceblue;
 }
 
 .box img{
@@ -171,7 +189,8 @@ h3{
 
 .carousel-container{
     position: relative;
-    height: 360px;
+    /* height: 360px; */
+    height: 180px;
     /* width: 480px; */
     width: 320px;
     z-index:20;
@@ -182,7 +201,7 @@ h3{
     position: absolute;
     /* height: 360px;
     width: 360px; */
-    height: 240px;
+    /* height: 240px; */
     width: 240px;
     /* background-color: rgb(29, 247, 0); */
     background-color: rgb(0, 136, 255);
@@ -217,7 +236,7 @@ h3{
     top:50px;
 }
 
-@media (min-width:1024px) {
+@media (min-width:1000px) {
     html{
         font-size: 28px;
     }
@@ -248,15 +267,16 @@ h3{
         border-bottom: solid 5px rgb(247, 247, 247);
     }
     .carousel-whole-container{
-        padding-top: 3rem;
+        /* padding-top: 3rem; */
         /* width: 560px; */
         width: 100%;
         max-width: 100vw;
-        /* min-height: 100vh; */
+        min-height: 60vh;
         /* min-height: 100vh; */
         /* background-color: rgb(184, 140, 83); */
         text-align: center;
         overflow-x: hidden;
+        padding-top: 15%;
     }
     
     .carousel-whole-container .button-group a{
@@ -267,7 +287,8 @@ h3{
     .carousel-container{
         position: relative;
         width: 720px;
-        height: 600px;
+        /* height: 600px; */
+        height: 240px;
         z-index:20;
         margin: 0 auto;
         /* background-color: aliceblue; */
@@ -277,7 +298,7 @@ h3{
         position: absolute;
         /* height: 480px;
         width: 480px; */
-        height: 560px;
+        height: 120px;
         width: 560px;
         /* height: 240px;
         width: 240px; */
