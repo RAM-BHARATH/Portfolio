@@ -100,17 +100,21 @@ h3{
     /* max-width: 50%; */
     /* background-color: aqua; */
     /* display: flex;     */
-    padding: 20px;
+    /* padding: 5px; */
     /* flex-direction: row; */
     /* align-items: center; */
+    margin: 0 auto;
 }
 
 
 .project .proj-ss{
     /* min-width: 320px; */
     /* max-width: 50%; */
-    margin: 20px;
-    width: 60%;
+    /* margin: 20px; */
+    /* width: 60%; */
+    display: block;
+    margin: 0 auto;
+    width: 90%;
     height: min-content;
     border: 5px solid #3f3f3f;
 }
