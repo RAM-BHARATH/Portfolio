@@ -77,7 +77,7 @@ h3{
     width: 100%;
     padding: 0;
     font-size: 2rem;
-    /* overflow-x:hidden; */
+    overflow-x:hidden;
     min-height: 100vh;
     margin:0 0 10px 0;
     color: rgb(0, 136, 255);
@@ -99,10 +99,10 @@ h3{
     width: 100%;
     /* max-width: 50%; */
     /* background-color: aqua; */
-    display: flex;    
+    /* display: flex;     */
     padding: 20px;
-    flex-direction: row;
-    align-items: center;
+    /* flex-direction: row; */
+    /* align-items: center; */
 }
 
 
@@ -126,7 +126,7 @@ h3{
 }
 
 .project-links img{
-    width: 48px;
+    width: 36px;
 }
 
 .project-links a{
@@ -366,6 +366,26 @@ h3{
     .nav-item img{
         width: 36px;
         /* fill: aliceblue; */
+    }
+
+    .project{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    
+    .project .proj-ss{
+        /* min-width: 320px; */
+        /* max-width: 50%; */
+        margin: 20px;
+        width: 60%;
+        height: min-content;
+        border: 5px solid #3f3f3f;
+    }
+
+    .project-links img{
+        width: 48px;
     }
 
     .carousel-whole-container{
