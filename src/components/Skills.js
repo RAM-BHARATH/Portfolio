@@ -32,7 +32,7 @@ export default function Skills() {
                         <img src="/images/node-js.svg" alt="" />
                     </div>
                     <div className="box express-center">
-                        <img src="/images/expressjs.png" alt="" />
+                        <img src="/images/expressjs.svg" alt="" />
                     </div>
                     <div className="box">
                         <img src="/images/php.svg" alt="" />
@@ -41,7 +41,7 @@ export default function Skills() {
                         <img src="/images/mongo.svg" alt="" />
                     </div>
                     <div className="box">
-                        <img src="/images/firebase.svg" alt="" />
+                        <img src="/images/postgresql.svg" alt="" />
                     </div>
                     <div className="box">
                         <img src="/images/mysql.svg" alt="" />

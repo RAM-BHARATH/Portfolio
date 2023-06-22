@@ -26,6 +26,7 @@ h3{
 
 .main{
     max-width: 100%;
+    /* width: 100vw; */
     font-size: 4rem;
     overflow-x:hidden;
     min-height: 100vh;
@@ -34,6 +35,8 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    align-content: center ;
     color: rgb(0, 136, 255);
 }
 
@@ -66,15 +69,77 @@ h3{
     overflow-x:hidden;
 }
 
+.works-outer-div{
+    /* background-color: aliceblue; */
+    background-color: rgb(73, 73, 88);
+    /* display: flex; */
+    /* flex-direction: row; */
+    width: 100%;
+    padding: 0;
+    font-size: 2rem;
+    /* overflow-x:hidden; */
+    min-height: 100vh;
+    margin:0 0 10px 0;
+    color: rgb(0, 136, 255);
+    /* align-items: center; */
+}
+/* 
+.works-head{
+    text-align: center;
+    color: aliceblue;
+} */
+
+
+.project{
+    /* min-width: 320px; */
+    /* max-width: 480px; */
+    width: 100%;
+    /* max-width: 50%; */
+    /* background-color: aqua; */
+    display: flex;    
+    padding: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.project .proj-ss{
+    /* min-width: 320px; */
+    /* max-width: 50%; */
+    margin: 20px;
+    width: 60%;
+    height: min-content;
+    border: 5px solid #3f3f3f;
+}
+
+.tech-stack *{
+    font-size: 0.5rem;
+    padding: 5px;
+    margin: 2px;
+    background-color: #3f3f3f;
+}
+.desc{
+    font-size: 0.8rem;    
+}
+
+.project-links img{
+    width: 48px;
+}
+
+.project-links a{
+    margin: 10px;
+}
+
 .skills{
     padding-top: 1rem;
     text-align: center;
     color: rgb(0, 136, 255);
     font-size: 2rem;
 }
-.skills h2{
+.skills h2, .works h2{
     color: aliceblue;
     font-size: 2.5rem;
+    text-align: center;
 }
 
 .skills-container{
@@ -91,13 +156,15 @@ h3{
     /* background-color: rgb(248, 249, 250); */
     /* background-color: rgba(211, 42, 233, 0.322); */
     /* background-color: rgba(0, 136, 255, 0.13); */
-    background-color: rgba(248, 249, 250, 0.541);
+    background-color: rgba(248, 249, 250, 0.932);
     border-radius: 5px;
 }
 
 .left-nav{
     position: fixed;
     z-index: 10;
+    width: 100px;
+    left: -20px;
 }
 
 .nav-item{
@@ -373,7 +440,7 @@ h3{
         width: 80px;
         margin: 10px;
         /* background-color: rgb(248, 249, 250); */
-        background-color: rgba(248, 249, 250, 0.541);
+        /* background-color: rgba(248, 249, 250, 0.541); */
         border-radius: 5px;
     }
     

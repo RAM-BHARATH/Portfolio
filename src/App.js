@@ -8,7 +8,7 @@ function App() {
   
   return (
     <>
-      {console.log(document.readyState)}
+      {/* {console.log(document.readyState)} */}
       <Navbar />
       <Main />
       <Projects />
