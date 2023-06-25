@@ -1,5 +1,11 @@
-import { useState } from "react";
 import Project from "./Project";
+import {Swiper, SwiperSlide} from "swiper/react";
+import 'swiper/css';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
+
 
 export default function Projects() {
     // let totalItems = 9;
@@ -14,7 +20,7 @@ export default function Projects() {
             source:'https://github.com/RAM-BHARATH/news-tracker-app',
             // live:'https://markdown-previewer-01.herokuapp.com/',
             techStack: ['Flask', 'NewsAPI', 'Docker', 'Kubernetes', 'Auth0', 'CSS'],
-            imgSrc: '/images/projects/dear-diary.png',
+            imgSrc: '',
             desc: "A webapp that let's you store whatever text content you want and it can be grouped into categories..."
         },
         {
@@ -39,23 +45,23 @@ export default function Projects() {
             source:'https://github.com/RAM-BHARATH/genio2k22',
             live:'https://genio2k22.netlify.app', ///https://www.genio2k22.com
             techStack: ['React.js', 'CSS', 'Bootstrap'],
-            imgSrc: '/images/projects/dear-diary.png',
+            imgSrc: '',
             desc: "A webapp that let's you store whatever text content you want and it can be grouped into categories..."
         },
-        {
-            name:'Memory Card',
-            source:'https://github.com/RAM-BHARATH/memory-card',
-            live:'https://ram-bharath.github.io/memory-card/',
-            techStack: ['React.js'],
-            imgSrc: '/images/projects/dear-diary.png',
-            desc: "A webapp that let's you store whatever text content you want and it can be grouped into categories..."
-        },
+        // {
+        //     name:'Memory Card',
+        //     source:'https://github.com/RAM-BHARATH/memory-card',
+        //     live:'https://ram-bharath.github.io/memory-card/',
+        //     techStack: ['React.js'],
+        //     imgSrc: '',
+        //     desc: "A webapp that let's you store whatever text content you want and it can be grouped into categories..."
+        // },
         // {
         //     name:'Weather App',
         //     source:'https://github.com/RAM-BHARATH/weather-app',
         //     live:'https://ram-bharath.github.io/weather-app/',
         //     techStack: ['HTML/CSS', 'API'],
-        //     imgSrc: '/images/projects/dear-diary.png',
+        //     imgSrc: '',
         //     desc: "An app that gets the currrent weather from OpenWeather API and displays it.. "
         // },
         {
@@ -63,7 +69,7 @@ export default function Projects() {
             source:'https://github.com/RAM-BHARATH/shopping-cart/',
             live:'https://ram-bharath.github.io/shopping-cart',
             techStack: ['React.js'],
-            imgSrc: '/images/projects/dear-diary.png',
+            imgSrc: '',
             desc: "A webapp that let's you store whatever text content you want and it can be grouped into categories..."
         },
         {
@@ -71,7 +77,7 @@ export default function Projects() {
             source:'https://github.com/RAM-BHARATH/markdown-previewer',
             live:'https://markdown-previewer-01.herokuapp.com/',
             techStack: ['React.js'],
-            imgSrc: '/images/projects/dear-diary.png',
+            imgSrc: '',
             desc: "A webapp that let's you store whatever text content you want and it can be grouped into categories..."
         },
     ]
@@ -80,35 +86,63 @@ export default function Projects() {
             {/* To be updated */}
             <h2 className="works-head">Works</h2>
             <div className="projects-container">
-                {projects.map((project) => <Project key={project.name} project={project}/>)}
-                {/* <div className="project">
-                    <img src={process.env.PUBLIC_URL + "/images/projects/dear-diary.png"} className="proj-ss"/>
-                    <div className="content">
-                        <div className="project-title">
-                            {projects[0].name}
+                <Swiper
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    }}
+                    pagination={{
+                    clickable: true,
+                    }}
+                    keyboard={{
+                        enabled: true,
+                    }}
+                    navigation={true}
+                    loop={true}
+                    modules={[Autoplay, Pagination, Navigation, Keyboard]}
+                    className="swiper"
+                >
+                    {
+                        projects.map(
+                            (project, index) => 
+                                (
+                                    <SwiperSlide key={project.name} className="swiper-slide">
+                                        <Project key={index} project={project}/>
+                                    </SwiperSlide>
+                                )
+                        )
+                    }
+                    {/* <div className="project">
+                        <img src={process.env.PUBLIC_URL + "/images/projects/dear-diary.png"} className="proj-ss"/>
+                        <div className="content">
+                            <div className="project-title">
+                                {projects[0].name}
+                            </div>
+                            <div className="tech-stack">
+                            {projects[0].techStack.map((tech, index)=> <span>{tech}</span>)}
+                            </div>
+                            <div className="description">
+                                <p className="desc">
+                                    A webapp that let's you store whatever text content you want and it can be grouped into categories...
+                                </p>
+                            </div>
+                            <div className="project-links">
+                                <span>
+                                    <a href={projects[0].source} target="_blank">
+                                        <img src={process.env.PUBLIC_URL + "/images/assets/github.svg"}/>
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href={projects[0].live} target="_blank">
+                                        <img src={process.env.PUBLIC_URL + "/images/assets/live.svg"}/>
+                                    </a>
+                                </span>
+                            </div>
                         </div>
-                        <div className="tech-stack">
-                        {projects[0].techStack.map((tech, index)=> <span>{tech}</span>)}
-                        </div>
-                        <div className="description">
-                            <p className="desc">
-                                A webapp that let's you store whatever text content you want and it can be grouped into categories...
-                            </p>
-                        </div>
-                        <div className="project-links">
-                            <span>
-                                <a href={projects[0].source} target="_blank">
-                                    <img src={process.env.PUBLIC_URL + "/images/assets/github.svg"}/>
-                                </a>
-                            </span>
-                            <span>
-                                <a href={projects[0].live} target="_blank">
-                                    <img src={process.env.PUBLIC_URL + "/images/assets/live.svg"}/>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div> */}
+                    </div> */}
+                </Swiper>
             </div>
         </div>
     );
