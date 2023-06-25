@@ -99,7 +99,7 @@ export default function Projects() {
                     keyboard={{
                         enabled: true,
                     }}
-                    navigation={true}
+                    // navigation={true}
                     loop={true}
                     modules={[Autoplay, Pagination, Navigation, Keyboard]}
                     className="swiper"

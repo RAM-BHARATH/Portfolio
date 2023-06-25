@@ -78,7 +78,7 @@ h3{
     padding: 0;
     font-size: 2rem;
     overflow-x:hidden;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin:0 0 10px 0;
     color: rgb(0, 136, 255);
     /* align-items: center; */
@@ -371,6 +371,10 @@ h3{
     .nav-item img{
         width: 36px;
         /* fill: aliceblue; */
+    }
+
+    .works-outer-div{
+        height: 100vh;
     }
 
     .project{
